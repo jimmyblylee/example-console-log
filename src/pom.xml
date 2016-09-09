@@ -11,6 +11,8 @@
     <description>Console Log Example Aggregator</description>
     
     <modules>
+        <module>commons-log</module>
+        <module>commons-log-over-slf4j</module>
         <module>log4j2</module>
         <module>logback</module>
     </modules>
