@@ -1,0 +1,21 @@
+<configuration status="OFF">
+    <appenders>
+        <Console name="STDOUT" target="SYSTEM_OUT">
+            <PatternLayout pattern="%style{%d{HH:mm:ss.SSS} |-}{bright, yellow} %highlight{%-5p}{STYLE=Logback} %style{%c{1.}.%M\(\) \(%F %L\) -}{bright, yellow} %style{%m}{bright, cyan} %rEx %n" />
+        </Console>
+        <RollingFile name="ROLLING_FILE" fileName="app_logs/app.log" filePattern="app_logs/app-%d{yyyy-MM-dd_HH}.%i.log">
+            <PatternLayout pattern="\(%t\) %d{HH:mm:ss.SSS} |- %-5p %c{10}.%M\(\) \(%F %L\) - %m %rEx %n"/>
+            <SizeBasedTriggeringPolicy size="2 MB" />
+        </RollingFile>
+    </appenders>
+    <loggers>
+        <logger name="com.lee.example.log" level="trace" additivity="false">
+            <appender-ref ref="ROLLING_FILE" />
+            <appender-ref ref="STDOUT" />
+        </logger>
+        <root level="warn">
+            <appender-ref ref="ROLLING_FILE" />
+            <appender-ref ref="STDOUT" />
+        </root>
+    </loggers>
+</configuration>
