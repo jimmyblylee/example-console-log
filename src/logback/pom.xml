@@ -9,7 +9,7 @@
     </parent>
     
     <groupId>com.lee.example</groupId>
-    <artifactId>console-logback</artifactId>
+    <artifactId>example-console-logback</artifactId>
     <version>1.0.0</version>
     <packaging>jar</packaging>
 

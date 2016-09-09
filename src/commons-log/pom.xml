@@ -9,7 +9,7 @@
     </parent>
     
     <groupId>com.lee.example</groupId>
-    <artifactId>console-commons-log</artifactId>
+    <artifactId>example-console-commons-log</artifactId>
     <version>1.0.0</version>
     <packaging>jar</packaging>
 
